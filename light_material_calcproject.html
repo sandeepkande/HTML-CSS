@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            body{
+                background-color:#fff;
+            }
+            
+            
+            #container{
+                height:350px;
+                width:230px;
+                background-color:#444;
+                opacity:.9;
+                margin:0 auto;
+                border-radius:10px;
+                margin-top: 150px;
+            
+                box-shadow:5px 5px 18px black;
+            }
+            #container input[type="text"]{
+                height:40px;
+                width:210px;
+                margin-left:8px;
+                margin-top:15px;
+                margin-bottom:15px;
+                font-size:28px;
+                border-radius:10px;
+                border:groove gray;
+                background-color: aquamarine;
+            }
+            
+            #container input[type="button"]{
+                height:40px;
+                width:40px;
+                margin-top:8px;
+                margin-left:12px;
+                border-radius:8px;
+                border:none;
+                font-size:20px;
+                font-weight:bolder;
+                text-shadow:2px 2px 6px #262626;
+                box-shadow:3px 3px 8px #262626;
+                outline:none;
+                background-color:#fff;
+                
+            }
+             #container input[type="reset"]{
+                height:40px;
+                width:40px;
+                margin-top:8px;
+                margin-left:12px;
+                border-radius:8px;
+                border:none;
+                font-size:20px;
+                font-weight:bolder;
+                text-shadow:2px 2px 5px black;
+                box-shadow:3px 3px 8px #262626;
+                 outline:none;
+                 background-color:crimson;
+                 
+            }
+             #container input[type="button"]:hover{
+                font-size:22px;
+            }
+            
+            #container input[type="reset"]:hover{
+                font-size:22px;
+            }
+            
+            #container input[value="C"]{
+                width:150px;
+                background-color: tomato;
+            } 
+        
+        </style>
+    </head>
+    <body>
+        <form name="calc">
+            <div id="container">
+            <input  id="dispaly" type="text" name="dis" readonly style="text-align: right" placeholder="0"><br>
+            <input type="reset" value="CE" >
+            <input type="button" class="dip" value="C" onclick="document.calc.dis.value=document.calc.dis.value.slice(0,document.calc.dis.value.length-1)"><br>
+            <input type="button" value="1" onclick="document.calc.dis.value+='1'">
+            <input type="button" value="2" onclick="document.calc.dis.value+='2'">
+            <input type="button" value="3" onclick="document.calc.dis.value+='3'">
+            <input type="button" value="+" onclick="document.calc.dis.value+='+'"><br>
+            <input type="button" value="4" onclick="document.calc.dis.value+='4'">
+            <input type="button" value="5" onclick="document.calc.dis.value+='5'">
+            <input type="button" value="6" onclick="document.calc.dis.value+='6'">
+            <input type="button" value="-" onclick="document.calc.dis.value+='-'"><br>
+            <input type="button" value="7" onclick="document.calc.dis.value+='7'">
+            <input type="button" value="8" onclick="document.calc.dis.value+='8'">
+            <input type="button" value="9" onclick="document.calc.dis.value+='9'">
+            <input type="button" value="*" onclick="document.calc.dis.value+='*'"><br>
+            <input type="button" value="." onclick="document.calc.dis.value+='.'">
+            <input type="button" value="0" onclick="document.calc.dis.value+='0'">
+            <input type="button" value="=" onclick="document.calc.dis.value=eval(document.calc.dis.value)">
+            <input type="button" value="/" onclick="document.calc.dis.value+='/'">
+            </div>
+        </form>
+    </body>
+</html>
